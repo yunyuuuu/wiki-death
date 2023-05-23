@@ -7,3 +7,5 @@ https://pudding.cool/2018/08/wiki-death/
 
 数据预处理过程我用的是Python，但是写的太乱了，不建议看。
 Russell老师的数据预处理用js代码写的，可以参考：https://github.com/the-pudding/wiki-death-data
+
+BTW没有做手机端适应，手机端不好看。
