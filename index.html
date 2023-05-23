@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-16">
+    <meta http-equiv="viewport" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Half-Life of Death</title>
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/intro.css" />
+    <link rel="stylesheet" type="text/css" href="css/perspective.css" />
+    <link rel="stylesheet" type="text/css" href="css/care.css" />
+    <link rel="stylesheet" type="text/css" href="css/stroy.css" />
+    <link rel="stylesheet" type="text/css" href="css/bundle.css" />
+    <link rel="stylesheet" type="text/css" href="css/change.css" />
+    <link rel="stylesheet" type="text/css" href="css/impact.css" />
+    <link rel="stylesheet" type="text/css" href="css/tooltip.css" />
+    <link rel="stylesheet" type="text/css" href="css/filter.css" />
+    <script type="module" src="js/entry.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.4/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+</head>
+
+<body>
+    <header class='is-sticky'>
+        <div class='header__container'>
+            <text>YUNYU</text>
+        </div>
+    </header>
+    <main id='content'>
+        <div class='intro'>
+            <p class='intro__byline tk-atlas'>By
+                <strong>YUNYU</strong>
+                <time class='intro__time'>May 2023</time>
+            </p>
+            <div class='intro__prelude prelude--1'>
+                <p>
+                    <strong>When a famous person dies, </strong>articles are written, tweets are tweeted, and Wikipedia
+                    is updated.
+                </p>
+                <p><strong><span>It’s</span> <span>a</span> <span>big</span> <span>deal.</span></strong></p>
+            </div>
+            <!-- <h1 class='intro__hed tk-atlas'> </h1>
+            <p class='intro__dek tk-atlas'> </p> -->
+        </div>
+
+        <section id="perspective">
+            <!-- <h3 class="section__hed">How big a deal is it?</h3> -->
+            <div id='perspective-scroll'>
+                <figure class="scroll__figure">
+                    <figure class="figure__chart">
+                        <svg>
+                            <g class="g-axis">
+                                <g class="axis--x"></g>
+                                <g class="axis--y"></g>
+                            </g>
+                            <g class="g-vis">
+                                <g class='people'></g>
+                            </g>
+                            <g class="g-voronoi"></g>
+                        </svg>
+                        <div class="figure__footer">
+                            <figcaption class="x-small tk-atlas"><em><strong>Adjusted
+                                        Pageviews</strong> are the pageviews scaled to an
+                                    average day of Wikipedia traffic during the collection period of this data.
+                                    The remainder of the article will refer to this simply as "views".</em></figcaption>
+                            <p class="legend x-small"><span></span> = Living Icon</p>
+                        </div>
+                    </figure>
+                </figure>
+                <article class="scroll__text">
+                    <div class="step" data-step="context">
+                        <p>But just how big? To put this in perspective, let's look at living icon
+                            <a href="https://en.wikipedia.org/wiki/Billie_Eilish" target="_blank">Billie Eilish</a>.
+                            Here are her Wikipedia(English-language) Wikipedia pageviews between December of 2019 and
+                            Feburary of 2020, in 48nhours intervals.
+                        </p>
+                    </div>
+                    <div class="step" data-step="grammy">
+                        <p>On January 26, she won <a href='https://en.wikipedia.org/wiki/62nd_Annual_Grammy_Awards' ,
+                                target="_blank">
+                                62nd Annual Grammy Awards</a>, and the internet went wild. Her pageviews increased
+                            tenfold
+                            from about 100 thousand to nearly 1 million.
+                        </p>
+                    </div>
+                    <div class="step" data-step="kobe-before">
+                        <p>And now let's bring take a look at Kobe Bryant, starting with the period leading up to his
+                            death.
+                        </p>
+                    </div>
+                    <div class="step" data-step="kobe-spike">
+                        <p>In the 48 hours after Kobe Bryant's death was reported, he accumulated over 15 million
+                            pageviews
+                            on Wikipedia. The news of his death was reflected in the traffic.
+                        </p>
+                    </div>
+                    <div class="step" data-step="others">
+                        <p>More than 1700 <a href="https://en.wikipedia.org/wiki/Lists_of_deaths_by_year0"
+                                target="_blank">
+                                notable people</a> died in the last five years, according to Wikipedia. Here are 118 who
+                            got
+                            over half a million pageviews in the first 48 hours after their deaths.
+                        </p>
+                    </div>
+                    <div class="step step-hover" data-step="compare">
+                        <p>Although no one grabbed our attention quite like Kobe Bryant, the
+                            spikes in pageviews after death a celebrity’s death can overshadow
+                            that of other major events, even a Grammy Awards won.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id='change'>
+            <h3 class='section__hed'></h3>
+            <div class="prose">
+                <p>
+                    While not perfect, Wikipedia traffic serves as a solid proxy for the ebb and flow of a celebrity’s
+                    cultural relevance. It makes sense that household names like <a
+                        href="https://en.wikipedia.org/wiki/Kobe_Bryant" target="_blank">
+                        Kobe Bryant</a>or <a href="https://en.wikipedia.org/wiki/Elizabeth_II" target="_blank">Elizabeth
+                        II</a>
+                    get the most traffic immediately following their death. The bigger the star (or tragedy), the more
+                    they are searched.
+                </p>
+                <p>I could rattle off a dozen other recent deaths that seemed to eclipse the rest of the news cycle. But
+                    which celebrities’ pageviews grew abnormally high? <strong>Let’s look at the percent increase in
+                        pageviews
+                        compared to a typical day.</strong></p>
+            </div>
+
+            <figure class="is-truncated">
+                <table class='tk-atlas'>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th class='number'>Avg. 48hr views<br> before death</th>
+                            <th class='number'>Views 48 hrs.<br> after death</th>
+                            <th class='number'>Increase (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="show-more is-visible"></div>
+            </figure>
+            <div class='toggle-table'>
+                <button class="btn x-small">Show More</button>
+            </div>
+        </section>
+
+        <section id="care">
+            <!-- <h3 class='section__hed'>How long do we care for?</h3> -->
+
+            <div class="prose">
+                <p>
+                    The first 48 hours only tell us part of the story. We develop special relationships and often
+                    identify with celebrities. This is why Bourdain’s death had such an impact on me. Watching his show,
+                    I traveled the world alongside him for countless hours.
+                </p>
+                <p>
+                    And now I rewatch him more than ever. How long celebrities remain on our radar provides a different
+                    perspective on the impact of their death. <strong>Here are the number of weeks after death until
+                        pageviews returned to normal.</strong>
+                </p>
+            </div>
+
+            <figure class="figure--chart">
+                <p class="figure__hed"></p>
+
+                <ul class="figure__list tk-atlas"></ul>
+
+                <figcaption class="x-small tk-atlas"><em>A return to <strong>normal traffic</strong> was considered when
+                        the pageviews fell
+                        within two standard deviations of the median of the pageviews before the date of death.
+                    </em></figcaption>
+                <p class="figure__label x-small">Weeks until normal traffic</p>
+            </figure>
+        </section>
+
+        <section id="impact">
+            <div class="prose">
+                <p>
+                    But not everybody’s pageviews return to normal. At the time of publishing, Bourdain’s traffic
+                    remains steadily and significantly higher.
+                </p>
+                <p>
+                    There are plenty of possible reasons for this; perhaps the person was relatively unknown before, and
+                    their death increased their visibility. Or maybe there was a renewed interest in their life’s work.
+                    <strong>Let’s look at the one-week moving average of the percent increase in pageviews compared to
+                        the pre-death average.</strong>
+                </p>
+            </div>
+            <figure>
+                <div class="figure__chart">
+                    <img class="legend" src="assets/img/legend.png" alt="legend">
+                    <div class="annotation-ui">
+                        <label class="annotation-toggle">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <p class="annotation-text">Toggle annotations</p>
+                    </div>
+                    <svg>
+                        <g>
+                            <g class="g-axis">
+                                <g class="axis"></g>
+                            </g>
+                            <g class="g-vis"></g>
+                            <g class="g-annotations is-visible"></g>
+                        </g>
+                    </svg>
+                </div>
+                <figcaption class="x-small tk-atlas"><em>Only including people with data for at
+                        least 120 days after their death.</em>
+                </figcaption>
+            </figure>
+        </section>
+        <section id='conclusion'>
+            <div class='prose'>
+                <p>
+                    There are many ways to process death. For me, quantifying the public reaction offers a different way
+                    to look at these often unexpected, tragic events.
+                </p>
+            </div>
+
+        </section>
+
+        <div class="filters tk-atlas">
+            <p class="label x-small">
+                <span class="label__value x-small"></span>
+                <span class="description">Filter <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-filter">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg></span>
+            </p>
+            <div class="filter filter--cause">
+                <p class='filter__label x-small'>Cause</p>
+                <ul></ul>
+            </div>
+            <div class="filter filter--industry">
+                <p class='filter__label x-small'>Industry</p>
+                <ul></ul>
+            </div>
+            <p class="remove x-small">NONE</p>
+        </div>
+    </main>
+</body>
+
+</html>
