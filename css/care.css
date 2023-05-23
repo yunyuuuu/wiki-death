@@ -1,0 +1,93 @@
+#care figure.figure--video video{
+    max-width: 33rem;
+    margin: 0 auto;
+    /* display: none; */
+}
+
+#care figure.figure--video figcaption{
+    max-width: 33rem;
+    margin: 0.25em auto;
+    text-align: center;
+    color:rgb(85, 85, 85)
+}
+
+#care figure.figure--chart{
+    max-width: 55rem;
+    margin:0 auto;
+    position: relative;
+}
+
+#care figure.figure--chart figcaption{
+    max-width: 33rem;
+}
+
+#care figure.figure--chart .figure__list{
+    position:relative;
+    padding-left: 1rem;
+}
+
+#care figure.figure--chart .figure__hed{
+    margin: 0 auto;
+    max-width: 35rem;
+    padding:0 1rem;
+    margin-bottom: 3rem;
+}
+
+#care figure.figure--chart .people{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#care figure.figure--chart .person{
+    width: 12rem;
+    margin:0 0.25rem;
+    font-size: x-small;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#care figure.figure--chart .person.is-faded{
+    color:#a8a8a8;
+}
+
+#care figure.figure--chart .person.is-faded a{
+    color:#a8a8a8;
+}
+
+#care figure.figure--chart .person a{
+    border:none;
+}
+
+#care figure.figure--chart .person a:hover{
+    color:darkorchid;
+}
+
+#care figure.figure--chart .week{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+#care figure.figure--chart p.label{
+    font-size: small;
+    line-height: 1;
+    margin:0;
+    min-width: 2.5rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    color: red;
+    font-weight: 600;
+}
+
+#care .figure__label{
+    margin:0;
+    position: absolute;
+    top:50%;
+    left: 0;
+    /* max-width: 3rem; */
+    font-size: xx-small;
+    transform: rotate(-90deg) translate(-50%, 0);
+    transform-origin: 0 -30%;
+}

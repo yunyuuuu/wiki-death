@@ -1,0 +1,214 @@
+#impact figure{
+    max-width: 60rem;
+    margin:0 auto
+}
+
+#impact figcaption{
+    max-width: 35rem
+}
+
+#impact .figure__chart{
+    position: relaive;
+}
+
+/* #impact .person{
+    cursor: pointer;
+} */
+
+#impact .person path.after--area{
+    stroke: none;
+    fill: #8c8c8c;
+}
+
+#impact .person path.after--line{
+    stroke:#282828;
+    stroke-width: 1.5px;
+    fill: none;
+}
+
+#impact .person .name{
+    font-size: 12px;
+    font-weight: 600;
+    fill: #696969;
+    letter-spacing: 0.03em;
+}
+
+#impact .person:nth-child(even) path.after--area{
+    fill: #bababa;
+}
+
+/* #impact .person.is-faded path.after--area{
+    fill: #d2d2d2;
+}
+
+#impact .person.is-faded path.after--line{
+    stroke: #686868;
+    fill: none;
+} */
+
+#impact .person.is-faded .name{
+    fill: #d2d2d2;
+}
+
+#impact .person.is-active path.after--line{
+    stroke: #282828;
+}
+
+#impact .person.is-active path.after--area{
+    fill:#8c8c8c;
+}
+
+#impact .person.is-active:nth-child(even) path.after--area{
+    fill: #bababa;
+}
+
+#impact .person.is-active .name{
+    fill: darkorchid;
+}
+
+/* #impact svg:not(.is-faded) .person.is-inactive path.after--area{
+    fill: #d2d2d2;
+} */
+
+#impact .person.is-inactive path.after--area{
+    fill: #ebebeb;
+}
+
+#impact .person.is-inactive path.after--line{
+    stroke: #939393;
+}
+
+/* #impact .person.is-inactive text{
+    opacity:0.35;
+} */
+
+#impact .person .tip{
+    font-size: xx-small;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+#impact .person .tip--bg{
+    fill:none;
+    stroke-width: 3px;
+    stroke: #fff;
+}
+
+#impact .person .tip--fg{
+    fill: darkorchid;
+}
+
+#impact .interaction{
+    fill-opacity: 0;
+}
+
+figure svg{
+    cursor: pointer;
+}
+
+#impact figure svg .g-axis .tick line{
+    stroke-opacity: 0.5;
+    stroke: rgb(131, 128, 128);
+    stroke-width: 1px;
+    stroke-dasharray:  4px 4px;
+}
+
+#impact figure svg .g-axis path{
+    display: none;
+}
+
+#impact .legend{
+    max-width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+#impact .g-annotations{
+    opacity: 0;
+    transition: 250ms ease-in-out;
+}
+
+#impact .g-annotations.is-visible{
+    opacity: 1;
+}
+
+#impact .g-annotations .annottaion.float{
+    display: none;
+}
+
+#impact .g-annotations .annotation-note-bg{
+    fill:#fff;
+    fill-opacity: 0.9;
+    stroke:darkorchid;
+}
+
+#impact .g-annotations .annotation-note-content text{
+    fill:#9130c2;
+    
+}
+
+#impact .g-annotations .connector{
+    stroke:darkorchid;
+}
+
+#impact .annotation-ui{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem
+}
+
+#impact .annotation-text{
+    margin: 0;
+    font-size: x-small;
+    margin-left: 0.5em;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.annotation-toggle{
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+}
+
+.annotation-toggle input{
+    display: none;
+}
+
+.annotation-toggle input:cheked + .slider{
+    background-color: #5b5b5b;
+}
+
+.annotation-toggle input:focus + .slider{
+    background-color: 0 0 1px #5b5b5b;
+}
+
+.annotation-toggle input:checked + .slider:before{
+    transform: translateX(1.5rem);
+}
+
+.annotation-toggle .slider{
+    position: absolute;
+    cursor: pointer;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: #ccc;
+    transition: 0.33s;
+    border-radius: 1rem;
+}
+
+.annotation-toggle .slider:before{
+    position: absolute;
+    content: "";
+    height:1.25rem;
+    width:1.25rem;
+    border-radius: 50%;
+    left: 0.125rem;
+    bottom:0.125rem;
+    background-color: white;
+    transition: 0.33s;
+}

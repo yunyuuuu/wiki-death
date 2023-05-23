@@ -1,0 +1,390 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block
+}
+
+a img {
+    border: none
+}
+
+blockquote {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle
+}
+
+.xxx-small {
+    font-size: 10px;
+    line-height: 1.65
+}
+
+.xx-small {
+    font-size: 11px;
+    line-height: 1.65
+}
+
+.x-small {
+    font-size: 12px;
+    line-height: 1.65
+}
+
+.small {
+    font-size: 14px;
+    line-height: 1.65
+}
+
+.root {
+    font-size: 16px;
+    line-height: 1.65
+}
+
+.medium {
+    font-size: 18px;
+    line-height: 1.65
+}
+
+.large {
+    font-size: 20px;
+    line-height: 1.5
+}
+
+.x-large {
+    font-size: 24px;
+    line-height: 1.4
+}
+
+.xx-large {
+    font-size: 32px;
+    line-height: 1.4
+}
+
+.xxx-large {
+    font-size: 40px;
+    line-height: 1.4
+}
+
+.xxxx-large {
+    font-size: 48px;
+    line-height: 1.2
+}
+
+.xxxxx-large {
+    font-size: 64px;
+    line-height: 1.2
+}
+
+.hide-accessible {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute
+}
+
+.hide-invisible {
+    visibility: hidden
+}
+
+.hide-display {
+    display: none
+}
+
+.skip-to-main {
+    border: none;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute
+}
+
+.skip-to-main:focus {
+    width: auto;
+    height: auto;
+    background-color: #f4f4f4;
+    padding: .5rem;
+    z-index: 1000
+}
+
+.prose {
+    max-width: 35rem;
+    margin: 0 auto;
+    padding: 0 1rem
+}
+
+.media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRDMDBGQ0Y5NEI4NjExRTM5RTg2QTY1RTUyQjIxNEQyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRDMDBGQ0ZBNEI4NjExRTM5RTg2QTY1RTUyQjIxNEQyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REMwMEZDRjc0Qjg2MTFFMzlFODZBNjVFNTJCMjE0RDIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REMwMEZDRjg0Qjg2MTFFMzlFODZBNjVFNTJCMjE0RDIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C0EmkAAAAGElEQVR42mJiYGD4DwQMTECCEchhAAgwAEcGBv9dngKPAAAAAElFTkSuQmCC")
+}
+
+#starter-guide {
+    max-width: 40rem;
+    margin: 0 auto
+}
+
+body {
+    background-color: #fff;
+    color: #282828;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1;
+    font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 16px
+}
+
+@media only screen and (min-width:30em) {
+    body {
+        font-size: 18px
+    }
+}
+
+body.modal-open {
+    overflow-y: hidden;
+    padding-right: 1rem;
+    height: 100vh
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 1.4;
+    margin-top: 1.5rem
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 1.5rem
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 1.5rem
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-top: 1.5rem
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-top: 1.5rem
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 1.5rem
+}
+
+p {
+    margin: 1.5rem 0;
+    font-size: 16px;
+    line-height: 1.65
+}
+
+@media only screen and (min-width:30em) {
+    p {
+        font-size: 18px;
+        line-height: 1.65
+    }
+}
+
+a {
+    border-bottom: 1px solid #282828;
+    color: #282828;
+    text-decoration: none
+}
+
+a:visited,
+a:hover {
+    color: #282828
+}
+
+strong,
+b {
+    font-weight: 700
+}
+
+em,
+i {
+    font-style: italic
+}
+
+ul {
+    list-style-type: none
+}
+
+li {
+    font-size: 16px
+}
+
+@media only screen and (min-width:30em) {
+    li {
+        font-size: 18px
+    }
+}
+
+img,
+video {
+    display: block;
+    width: 100%
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px
+}
+
+@media only screen and (min-width:30em) {
+    button {
+        font-size: 18px
+    }
+}
+
+sub,
+sup {
+    position: relative;
+    vertical-align: baseline;
+    font-size: .75rem;
+    line-height: 0
+}
+
+sup {
+    top: -.5em
+}
+
+sub {
+    bottom: -.25em
+}

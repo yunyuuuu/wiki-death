@@ -1,0 +1,176 @@
+#perspective figure{
+    /* background: rgba(255,255,0, 0.5); */
+    position:sticky;
+    top:0;
+    padding:1rem;
+    transform: translate3d(0,0,0);
+    /* display: flex; */
+    align-items: center;
+    width:100%;
+}
+
+#perspective .figure__chart{
+    position: relative;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+#perspective .figure__chart.is-hover{
+    cursor: pointer;
+}
+
+#perspective figcaption{
+    text-align: left;
+    max-width: 35rem;
+    font-size:xx-small;
+    justify-content: space-between;
+}
+
+#perspective article{
+    /* make sure text part is not behind the graphic */
+    pointer-events: none;
+    position: relative;
+    /* background: rgba(255,0,0, 0.5); */
+}
+
+#perspective article.is-disabled{
+    pointer-events: none;
+}
+
+#perspective .step{
+    max-width: 33rem;
+    margin:0 auto;
+    padding-bottom: 320px;
+}
+
+#perspective .step:last-child{
+    margin-bottom: 18px;
+}
+
+#perspective .step p{
+    margin:0;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px rgba(64, 64, 64, 0.25);
+}
+
+#perspective .figure__chart svg .axis--x .tick line{
+    display: none;
+}
+
+#perspective .figure__chart svg .axis--x path{
+    display: none
+}
+
+/* #perspective .figure__chart svg .axis--x .tick:last-of-type{
+    display: none;
+} */
+
+#perspective .figure__chart svg .axis--y .tick line{
+    stroke-opacity: 0.5;
+    stroke: gray;
+    stroke-width: 1px;
+    stroke-dasharray: 4px 4px;
+}
+
+#perspective .figure__chart svg .axis--y .tick:first-of-type{
+    display: none;
+}
+
+#perspective .figure__chart svg .axis--y path{
+    display: none;
+}
+
+#perspective .figure__chart svg .person path{
+    fill: none;
+    stroke: rgb(192, 192, 192);
+    stroke-width: 2px;
+    transition: stroke 250ms ease-in-out;
+}
+
+#perspective .figure__chart svg .person path.is-transparent{
+    opacity: 0;
+}
+
+#perspective .figure__chart svg .person circle.is-transparent{
+    opacity: 0;
+}
+
+#perspective .figure__chart svg .person.is-active circle{
+    fill: darkorchid
+}
+
+#perspective .figure__chart svg .person.is-faded circle{
+    fill: #bababa
+}
+
+#perspective .figure__chart svg .person.is-faded.is-active circle{
+    fill: #282828
+}
+
+#perspective .figure__chart svg .person circle{
+    stroke: white;
+    fill: #747474;
+    stroke-width: 2px;
+}
+
+#perspective .figure__chart svg .person.is-transparent{
+    opacity: 0;
+}
+
+#perspective .figure__chart svg .person.is-highlight path{
+    stroke: #5b5b5b;
+}
+
+#perspective .figure__chart svg .person.is-highlight circle{
+    fill: #5b5b5b;
+}
+
+#perspective .figure__chart svg .person text{
+    font-size:small;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+#perspective .figure__chart svg .person text.bg{
+    fill: none;
+    stroke-width: 3px;
+    stroke: #fff;
+}
+
+#perspective .figure__chart svg .person text.fg{
+    fill: darkorchid;
+}
+
+#perspective .figure__chart svg .g-voronoi path{
+    /* stroke:red; */
+    fill-opacity: 0;
+}
+
+#perspective .figure__footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#perspective .figure__footer .legend{
+    margin:0;
+    color: darkorchid;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+#perspective .figure__footer .legend.is-visible{
+    opacity: 1;
+}
+
+#perspective .figure__footer .legend span{
+    display: inline-block;
+    vertical-align: middle;
+    width:1em;
+    height:1em;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid darkorchid;
+}

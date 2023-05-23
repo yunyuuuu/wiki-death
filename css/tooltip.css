@@ -1,0 +1,89 @@
+.tooltip--hidden{
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    width:19rem;
+    pointer-events: none;
+    box-shadow: 0 0 10px 2px rgba(143, 143, 143, 0);
+    padding: 1rem;
+    transform: translate(-50%, -110%);
+}
+
+.tooltip{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    z-index: 1000;
+    background: rgba(255, 255, 255,0.9);
+    width:19rem;
+    box-shadow: 0 0 10px 2px rgba(143, 143, 143, 0.33);
+    padding: 1rem;
+    pointer-events: none;
+    visibility: hidden;
+    transition: top 250ms ease-in-out, left 250ms ease-in-out;
+    transform: translate(0%, -100%);
+}
+
+.tooltip.is-right{
+    transform: translate(-90%, -100%);
+}
+
+.tooltip.is-bottom{
+    transform: translate(0%, 30%);
+}
+
+.tooltip.is-right.is-bottom{
+    transform: translate(-90%, 30%);
+}
+
+.tooltip.is-visible{
+    visibility: visible;
+}
+
+.tooltip p{
+    font-size: small;
+    line-height: 1.5;
+    margin:0;
+}
+
+.tooltip .display{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    align-items: baseline;
+}
+
+.tooltip .name{
+    font-weight: 600;
+}
+
+.tooltip .thumbnail{
+    width: 4rem;
+    height:4rem;
+    /* background-color: rgba(143, 143, 143, 1); */
+    object-fit: cover;
+    object-position: center 12%;
+    display: inline-block;
+    float: left;
+    margin-right: 0.75em;
+    border: 1px solid rgba(143, 143, 143, 1);
+    border-radius: 2px;
+}
+
+.tooltip .cause{
+    display: inline-block;
+    border-top: 1px solid rgba(143, 143, 143, 0.33);
+    margin-top: 1em;
+    padding-top: 0.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: xx-small;
+}
+
+.tooltip .cause span{
+    text-transform: none;
+    font-weight: 500;
+    font-size: x-small;
+}
